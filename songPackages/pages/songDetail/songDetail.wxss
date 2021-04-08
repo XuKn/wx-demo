@@ -1,0 +1,119 @@
+/* pages/songDetail/songDetail.wxss */
+.songDetailContainer{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0,0,0,.5);
+}
+/* 圆轴 */
+.songDetailContainer .circle{
+  z-index: 100;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 10rpx 0;
+}
+/* 指针 */
+.songDetailContainer .needle{
+  z-index: 99;
+  position: relative;
+  top: -40rpx;
+  left: 60rpx;
+  width: 192rpx;
+  height: 274rpx;
+  transform-origin:40rpx 0 ;
+  transform: rotate(-20deg);
+  transition: transform 1s;
+}
+.songDetailContainer .needleRotate{
+  transform: rotate(0deg);
+}
+/* 磁盘 */
+.songDetailContainer .discContainer{
+  position: relative;
+  top: -170rpx;
+  width: 598rpx;
+  height: 598rpx;
+}
+.songDetailContainer .discAnimation{
+  animation: disc 4s 1s linear infinite;
+}
+@keyframes disc{
+  form{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.songDetailContainer .discContainer .disc{
+  width: 100%;
+  height: 100%;
+}
+.songDetailContainer .discContainer .picUrl{
+  width: 370rpx;
+  height: 370rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+/* 按钮 */
+.songDetailContainer .buttonList{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  bottom: 40rpx;
+  border-top: 1rpx solid #fff;
+}
+.buttonList .iconfont{
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #fff;
+  width: 20%;
+  font-size: 50rpx;
+  text-align: center;
+}
+.buttonList .big{
+  font-size: 80rpx;
+}
+/* 进度条 */
+.progressBar{
+  position: absolute;
+  bottom: 200rpx;
+  display: flex;
+  width: 640rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  justify-content: space-between;
+}
+.progressBar .barContainer{
+  position: relative;
+  width: 450rpx;
+  background-color: rgba(0, 0,0,.5);
+  height: 8rpx;
+  margin: auto;
+}
+.progressBar .barContainer .realTimeBar{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 8rpx;
+  background-color: red;
+}
+.progressBar .barContainer .realTimeBar .audioCircle{
+  position: absolute;
+  right: -12rpx;
+  top: -2rpx;
+  background-color: #fff;
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+}

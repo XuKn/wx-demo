@@ -1,0 +1,28 @@
+<!--pages/Login/Login.wxml-->
+<view class="container">
+  <!-- 登录区域 -->
+  <view class="wrapper">
+     <view class="left-tit">LOGIN</view>
+     <view class="welcome">欢迎回来!</view>
+     <view class="inputContent">
+        <view class="inputItem">
+          <text>手机号码</text>
+          <input type="number" id="phone" placeholder="请输入手机号码"  bindinput = "getValue"/>
+        </view>
+        <view class="inputItem">
+          <text>密码</text>
+          <input password="{{true}}" id="password" placeholder="请输入密码"  bindinput = "getValue"/>
+        </view>
+     </view>
+     <!-- 登录按钮 -->
+     <button class="confirm-btn" type="warn" bindtap = "Login" >
+     登录  
+     </button>
+     <view class="forget">忘记密码?</view>
+  </view>
+  <!-- 注册区域 -->
+  <view class="register">
+    还没有账号?
+    <text>马上注册</text>
+  </view>
+</view>

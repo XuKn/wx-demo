@@ -1,0 +1,62 @@
+/* pages/Login/Login.wxss */
+.wrapper .left-tit{
+  font-size: 120rpx;
+  color: #f8f8f8;
+  margin-left: -16rpx;
+}
+.wrapper .welcome{
+  font-size: 46rpx;
+  margin-left: 50rpx;
+  margin-top: -90rpx;
+  color: #555;
+}
+.wrapper .inputContent{
+  margin-top: 90rpx;
+  padding: 0 60rpx;
+}
+.wrapper .inputContent .inputItem{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 120rpx;
+  margin-bottom: 50rpx;
+  background-color: #f8f6fc;
+  padding: 0 30rpx;
+  border-radius: 10rpx;
+}
+.wrapper .inputContent .inputItem>text{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #606266;
+}
+.wrapper .confirm-btn{
+  width: 630rpx;
+  margin-top: 70rpx;
+  background-color: #d43c33;
+  border-radius: 50rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  font-size: 32rpx;
+  color: #fff;
+  font-weight: bolder;
+}
+.wrapper .forget{
+  font-size: 28rpx;
+  margin-top: 40rpx;
+  color: #4399fc;
+  text-align: center;
+}
+.container .register{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 50rpx;
+  text-align: center;
+  color: #606266;
+  font-size: 28rpx;
+}
+.container .register>text{
+  color: #4399fc;
+  margin-left: 10rpx;
+}

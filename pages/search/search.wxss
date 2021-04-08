@@ -1,0 +1,134 @@
+/* pages/search/search.wxss */
+.searchContainer{
+  padding: 0 20rpx;
+}
+/* 头部 */
+.header{
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 10rpx 0;
+}
+.header .inputContainer{
+  position: relative;
+  border-radius: 30rpx;
+  flex: 1;
+  font-size: 30rpx;
+  background-color: rgba(237,237,237,.3)
+}
+.header .inputContainer .searchIcon{
+  position: absolute;
+  left: 15rpx;
+  color: rgba(0,0,0,.8);
+}
+/* 头部搜索区域 */
+.header .inputContainer>input{
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 120rpx);
+  height: 60rpx;
+  margin-left: 50rpx;
+}
+/* x号取消 */
+.header .inputContainer .cancelx{
+  position: absolute;
+  right: 0;
+  font-size: 40rpx;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+}
+/* 取消搜索区域 */
+.header .cancel{
+  text-align: center;
+  width: 100rpx;
+}
+/* 热搜榜内容区域 */
+.hotBotcontainer{
+  margin-top: 30rpx;
+}
+.hotBotcontainer .title{
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.hotBotcontainer .hotBotList{
+  display: flex;
+  flex-wrap: wrap;
+}
+.hotBotcontainer .hotBotList .hotBotItem{
+  display: flex;
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+}
+.hotBotcontainer .hotBotList .hotBotItem .count{
+  margin: 0 10rpx;
+}
+.hotBotcontainer .hotBotList .hotBotItem>image{
+  width: 30rpx;
+  height: 20rpx;
+  margin-top: 30rpx;
+  margin-left: 10rpx;
+}
+.hotBotcontainer .hotBotList .hotBotItem .textContent{
+  max-width: 300rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* 搜索内容区域 */
+.searchValueContainer .title{
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #d43c33;
+  border-bottom: 1rpx solid #d43c33;
+}
+.searchValueContainer .searchDataList .listItem{
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+.searchValueContainer .searchDataList .listItem .searchItem{
+  color: rgba(0,0,0,.8);
+  margin-right: 10rpx;
+}
+.searchValueContainer .searchDataList .listItem .context{
+  width: 100%;
+  border-bottom: 1rpx solid #eee;
+}
+/* 搜索历史区域 */
+.searchHistory{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 26rpx;
+  margin: 20rpx 0;
+}
+.searchHistory .title{
+  font-size: 30rpx;
+  height:50rpx;
+  margin-right: 20rpx;
+}
+.searchHistory .historyItem{
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0 30rpx;
+  background-color:#ededed;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+.searchHistory .deleteHistory{
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  top: 0;
+  right: 0;
+  font-size: 50rpx;
+}

@@ -1,0 +1,48 @@
+<!--pages/search/search.wxml-->
+<view class="searchContainer">
+  <!-- 头部  -->
+  <view class="header">
+    <view class="inputContainer">
+      <text class="iconfont searchIcon iconsearch"></text>
+      <input type="text" value="{{inputValue}}" bindinput="handleInputValue" placeholder="{{searchContext}}"/>
+      <text wx:if="{{inputValue}}" bind:tap="cancelBtn" class="cancelx">x</text>
+    </view>
+    <text class="cancel">取消</text>
+  </view>
+  <!-- 搜索内容区域 -->
+  <block wx:if="{{searchInputData.length}}">
+    <view class="searchValueContainer">
+      <view class="title">搜索内容 : {{inputValue}}</view>
+      <view class="searchDataList">
+        <view class="listItem" wx:for="{{searchInputData}}" wx:key="id">
+          <text class="iconfont searchItem iconsearch"></text>
+          <view class="context">{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- 热搜榜区域 -->
+  <block wx:else>
+    <!-- 搜索历史 -->
+    <view class="searchHistory" wx:if="{{inputHistoryList.length}}">
+      <text class="title">历史</text>
+      <text class="historyItem" wx:for="{{inputHistoryList}}">{{item}}</text>
+      <text bind:tap="deleteHistory" class="iconfont deleteHistory icon6"></text>
+    </view>
+    <view  class="hotBotcontainer">
+      <!-- 标题 -->
+      <view class="title">
+      热搜榜
+      </view>
+      <!-- 热搜榜列表 -->
+      <view class="hotBotList">
+      <!-- 单个搜索 -->
+        <view class="hotBotItem" wx:for="{{searchList}}"wx:key="score">
+          <text class="count">{{index+1}}</text>
+          <text class="textContent">{{item.searchWord}}</text>
+          <image wx:if="{{item.iconUrl}}" src="{{item.iconUrl}}" />
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

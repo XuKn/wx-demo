@@ -1,0 +1,88 @@
+/* 头部 */
+.header{
+  display: flex;
+  padding: 10rpx;
+}
+.header image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.header .search{
+  flex: 1;
+  border: 1rpx solid #eee;
+  margin: 0 20rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  color: #d43c33;
+}
+/* 导航区域 */
+.navScroll{
+  display: flex;
+  white-space: nowrap;
+  height: 60rpx;
+}
+.navScroll .navItem{
+  padding: 0 30rpx;
+}
+.navItem .videoContext{
+  height: 60rpx;
+  line-height: 60rpx;
+  box-sizing: border-box;
+}
+.navItem .active{
+  border-bottom: 1rpx solid #d43c33;
+}
+/* 视频区域 */
+.videoScroll{
+  margin-top: 10rpx;
+  height: calc(100vh - 152rpx);
+}
+.videoScroll .videoItem{
+  padding: 0 3%;
+}
+.videoScroll .videoItem .common{
+  width: 100%;
+  height: 360rpx;
+  border-radius: 10rpx;
+}
+.videoItem .title{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #eee;
+  max-width: 500rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.videoItem .userInfo{
+  padding: 20rpx 0;
+}
+.userInfo>image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.userInfo .nickname{
+  font-size: 26rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+.userInfo .comments{
+  float: right;
+}
+.comments .item{
+  margin-left: 50rpx;
+  position: relative;
+}
+.comments .item .count{
+  position: absolute;
+  color: #777;
+  font-size: 26rpx;
+}
+.comments .btn{
+  display: inline;
+  padding: 0;
+  border: none;
+}

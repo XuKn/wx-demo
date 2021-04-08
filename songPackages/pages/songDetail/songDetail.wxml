@@ -1,0 +1,34 @@
+<!--pages/songDetail/songDetail.wxml-->
+<view class="songDetailContainer">
+  <!-- 作者 -->
+  <view class="author">{{songDetail.ar[0].name}}</view>
+  <view class="circle"></view>
+  <!-- 指针 -->
+  <image class="needle {{isPlay && 'needleRotate'}}" src="/static/images/song/needle.png" />
+  <!-- 磁盘 -->
+  <view class="discContainer {{isPlay&&'discAnimation'}}">
+    <image class="disc" src="/static/images/song/disc.png" />
+    <image class="picUrl" src="{{songDetail.al.picUrl}}" />
+  </view>
+  <!-- 进度条 -->
+  <view class="progressBar">
+    <text>{{currentTime}}</text>
+    <!-- 总进度条 -->
+    <view class="barContainer">
+      <!-- 实时进度条 -->
+      <view class="realTimeBar" style="width : {{currentWidth + 'rpx'}}">
+        <!-- 小圆球 -->
+        <view class="audioCircle"></view>
+      </view>
+    </view>
+    <text>{{duration}}</text>
+  </view>
+  <!-- 按钮 -->
+  <view class="buttonList">
+    <text class="iconfont iconiconsMusicyemianbofangmoshiShuffle"></text>
+    <text class="iconfont iconshangyishoushangyige" id="previous" bind:tap="handleSwich"></text>
+    <text class="iconfont {{isPlay?'iconbofang1':'iconbofang'}} big" bind:tap="musicPlay"></text>
+    <text class="iconfont iconnext-song" id="next" bind:tap="handleSwich"></text>
+    <text class="iconfont iconPlaylist"></text>
+  </view>
+</view>
